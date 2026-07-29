@@ -1,0 +1,54 @@
+ComfyUI-AnimePose
+Licensed under the GNU Affero General Public License v3.0 (see LICENSE).
+
+================================================================================
+Upstream work
+================================================================================
+
+This project is a derivative of:
+
+    bizarre-pose-estimator
+    https://github.com/ShuhongChen/bizarre-pose-estimator
+    Copyright (c) Shuhong Chen and Matthias Zwicker
+    Licensed under the GNU Affero General Public License v3.0
+
+Everything that makes pose estimation on illustrated characters work here --
+the model architecture, the trained weights, the segmentation model, the crop
+geometry and the keypoint schema -- is their research and their work. This
+project contributes packaging: a ComfyUI node, a Detectron2-free reimplementation
+of the inference path, and a confidence gate on top of the model's heatmaps.
+
+If you use this, cite their paper:
+
+    @inproceedings{chen2022bizarre,
+        title={Transfer Learning for Pose Estimation of Illustrated Characters},
+        author={Chen, Shuhong and Zwicker, Matthias},
+        booktitle={Proceedings of the IEEE/CVF Winter Conference on
+                   Applications of Computer Vision},
+        year={2022}
+    }
+
+The published weight files are a repackaging of their released checkpoints:
+same tensors, converted to safetensors, with the unused Detectron2 branch
+removed. `scripts/verify_weights.py` checks this claim tensor-by-tensor
+against the official release.
+
+Because the upstream work is AGPL-3.0, so is this, and so is anything derived
+from it. In particular, if you run this as part of a network service, the
+AGPL's section 13 requires you to offer the corresponding source to the users
+of that service.
+
+================================================================================
+Other components
+================================================================================
+
+The OpenPose-18 skeleton renderer in anime_pose/pose_convert.py reproduces the
+drawing conventions (limb pairs, colours, stick width) of `draw_bodypose` from
+comfyui_controlnet_aux's DWPose module, so output is interchangeable with it:
+
+    https://github.com/Fannovel16/comfyui_controlnet_aux
+
+The keypoint prior is torchvision's keypointrcnn_resnet50_fpn, standing in for
+the Detectron2 model the original uses:
+
+    https://github.com/pytorch/vision  (BSD-3-Clause)

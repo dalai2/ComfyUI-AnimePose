@@ -1,0 +1,16 @@
+[project]
+name = "comfyui-anime-pose"
+description = "Pose estimation for anime and illustrated characters, as a ControlNet OpenPose preprocessor. Works where person-detector-based estimators refuse to fire."
+version = "0.1.0"
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["kornia", "opencv-python", "safetensors"]
+
+[project.urls]
+Repository = "https://github.com/CHANGEME/ComfyUI-AnimePose"
+
+[tool.comfy]
+PublisherId = "CHANGEME"
+DisplayName = "ComfyUI-AnimePose"
+Icon = ""

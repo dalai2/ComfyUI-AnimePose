@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Downloaded / built model weights - never commit these
+models/
+dist_weights/
+*.safetensors
+*.ckpt
+*.pt
+*.onnx
+
+# Development material: test illustrations, reference keypoints, scratch
+# outputs, backups of earlier installs. Kept out of the published repo.
+dev/
+
+# Ad-hoc comparison sheets produced by scripts/
+compare_dwpose.png
+compare_*.png
+_out_*.png
+
+# local Claude Code state
+.claude/
