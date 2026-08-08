@@ -8,9 +8,9 @@ requires-python = ">=3.10"
 dependencies = ["kornia", "opencv-python", "safetensors"]
 
 [project.urls]
-Repository = "https://github.com/CHANGEME/ComfyUI-AnimePose"
+Repository = "https://github.com/dalai2/ComfyUI-AnimePose"
 
 [tool.comfy]
-PublisherId = "CHANGEME"
+PublisherId = "dalai2"
 DisplayName = "ComfyUI-AnimePose"
 Icon = ""

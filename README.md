@@ -20,7 +20,7 @@ No Docker, no Detectron2, weights download themselves on first use.
 
 ```bash
 cd ComfyUI/custom_nodes
-git clone https://github.com/CHANGEME/ComfyUI-AnimePose
+git clone https://github.com/dalai2/ComfyUI-AnimePose
 ```
 
 Restart ComfyUI. The node is **Anime Pose Estimator**, under

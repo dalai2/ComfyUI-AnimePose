@@ -31,7 +31,7 @@ from pathlib import Path
 # Publishing target. Set HF_REPO to the HuggingFace repo holding the files
 # produced by scripts/make_weights.py.
 # ---------------------------------------------------------------------------
-HF_REPO = os.environ.get("ANIMEPOSE_HF_REPO", "CHANGEME/ComfyUI-AnimePose-weights")
+HF_REPO = os.environ.get("ANIMEPOSE_HF_REPO", "mrpm/ComfyUI-AnimePose-weights")
 HF_REVISION = "main"
 
 POSE_PUBLISH_NAME = "anime_pose_head.safetensors"      # ~37.5 MB
