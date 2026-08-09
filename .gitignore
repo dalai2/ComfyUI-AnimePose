@@ -22,3 +22,9 @@ _out_*.png
 
 # local Claude Code state
 .claude/
+
+# Third-party art used for testing. Not ours to redistribute, and this repo
+# is public: keep evaluation images out of it.
+*.jpg
+*.jpeg
+*.webp
